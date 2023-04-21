@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>       
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <title>Laura Steinkopf | UX/UI Designer</title> 
+</head>
+
+<body>
+
+<ul>
+    <a href="index.html"><img src="images/logo-with-name.png" alt="logo+name" height="65"></a>
+    <li><a href="#contact">CONTACT</a></li>
+    <li><a href="#work">WORK</a></li>
+    <li><a href="#aboutGrid">ABOUT</a></li> 
+</ul>
+
+
+<section id="heroGrid">
+    <div id="leftGraphic" class="heroGridArea">
+        <img src="images/left line graphic.png" alt="sienna retro line graphic" height="750">
+    </div>    
+    <div class="heroLogo"> <!-- add alternate animation -->
+        <img src="images/logo_transparent_w.title.png" alt="logo" height="250">                
+    </div>
+    <div id="rightGraphic" class="heroGridArea">
+        <img src="images/right line graphic.png" alt="black retro line graphic" height="1760">
+    </div>    
+    
+</section>
+
+
+<section id="aboutGrid">
+    <div class="helloContainer">  
+        <img src="images/button hello black.png" class="hello-image" alt="black circle with word hello inside" height="500">
+    </div>
+    <div class="heading">
+        <p>ABOUT</p> <!-- WHY NOT ALIGNED TO TOP OF SECTION? -->
+    </div>
+    <div id="aboutText" class="aboutGridArea">                
+        <p>Sed ut perspiciatis unde omnis iste natus error sit illo fugit voluptatem nisl saepe accusantium doloremque laudantium dicta atque civibus et quasi. Totam rem aperiam, eaque ipsa quae ab illo inventore  quasi architecto beatae  odit aut fugit. Te sanguine id seacula est sodales odit quocumque leo vivamus dui typi dicta atque civibus sem.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit illo fugit voluptatem nisl saepe accusantium doloremque laudantium dicta atque civibus et quasi. Totam rem aperiam, eaque ipsa quae ab illo inventore  quasi architecto beatae  odit aut fugit. Te sanguine id seacula est sodales odit quocumque leo vivamus dui typi dicta atque civibus sem.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit illo fugit voluptatem nisl saepe accusantium doloremque laudantium dicta atque civibus et quasi. Totam rem aperiam, eaque ipsa quae ab illo inventore  quasi architecto beatae  odit aut fugit. Te sanguine id seacula est sodales odit quocumque leo vivamus dui typi dicta atque civibus sem.</p>
+    </div>
+    <div class="resume-container" >
+        <a href="resume.html"><img src="images/button resume blue.png" class="resume-image" alt="blue circle with word 'resume' inside" height="200"></a>
+    </div>
+</section>
+
+<section id="work">
+    <div class="heading" class="workGridArea">
+        <p>WORK</p>
+    
+<!-- slideshow -->
+
+    <div class="slideshowContainer">
+
+    <!-- case study images  -->   <!-- WHY NOT ALL VISIBLE AT ONCE?  -->
+    <div class="mySlides fade">
+        <a href="case-study01.html"><img src="images/case-study-1.png" style="width:30%"></a>
+    </div>
+  
+    <div class="mySlides fade">
+        <a href="case-study02.html"><img src="images/case-study-2.png" style="width:30%"></a>
+    </div>
+  
+    <div class="mySlides fade">
+        <a href="case-study03.html"><img src="images/case-study-3.png" style="width:30%"></a>
+    </div>
+  
+    <div class="mySlides fade">
+        <a href="case-study03.html"><img src="images/case-study-4.png" style="width:30%"></a>
+    </div>
+
+    <div class="mySlides fade">
+        <a href="case-study03.html"><img src="images/case-study-5.png" style="width:30%"></a>
+    </div>
+
+    <!-- next / previous buttons -->    <!-- WHY NOT VISIBLE?  -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <br>
+  
+  <!-- dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+</div>
+</section>
+
+<!-- end slideshow -->
+
+
+<section id="contact">
+    <div class="heading">
+        <p>CONTACT</p>
+    </div>
+    <div id="contactText">                
+        <p>Thanks for stopping by!</p>
+        <p>Let's connect:</p>
+    </div>
+    <div class="contactContainer">  <!-- add icon on mouseover to these images -or- change to animated group of circles -->
+        <a href="mailto:l.e.steinkopf@gmail.com"><img src="images/button email black.png" class="email-image" alt="black circle with word 'email' inside" height="175"></a>
+        <a href="https://www.linkedin.com/in/laurasteinkopf/"><img src="images/button linkedin blue.png" class="linkedin-image" alt="blue circle with word 'linkedin' inside" height="175"></a>
+        <a href="mailto:+16124324245@tel"><img src="images/button phone sienna.png" class="phone-image" alt="sienna brown circle with word 'phone' inside" height="175"></a>
+        
+    </div>
+</section>
+
+
+<!-- insert preloader here if using -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

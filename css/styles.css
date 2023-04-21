@@ -1,0 +1,307 @@
+body {     
+  margin: 0;
+  padding-top: 0px;
+  background-color: #EEEEEE;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Poiret One', cursive;
+}
+
+
+/* Navigation CSS */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 2px;
+  padding-left: 10px;
+  overflow: hidden;
+  background-color: #EEEEEE;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25); /* drop shadow */
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 0px;
+  padding-right: 40px;
+  font-size: 18pt;
+  text-decoration: none;  
+}
+
+li a:hover {
+    color: #A26747;
+  }
+
+
+
+/* Above Fold CSS */
+
+#heroGrid {
+  margin: 0px;
+  padding-top: 55px;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: 
+  "left logo right"
+  "left logo right"
+  "left title right"
+  ;
+}
+
+#leftGraphic {
+  grid-area: left;
+  display: flex;
+  margin-top: 15px;
+}
+
+#rightGraphic {       
+  grid-area: right;
+  display: flex;
+  align-content: right;
+  margin-left: 20px;
+}
+
+.heroGridArea {
+  margin: 0px;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 500px 1fr;
+  grid-template-areas: "left logo right"
+  "left logo right"
+  "left title right";
+}
+
+.heroLogo {        
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  align-items: center;
+  max-width: 700px;
+  height: auto;
+}
+
+.heroLogo img {   /* WHY IN FRONT OF HEADER ON SCROLL? */
+    animation: grow-and-shrink 2000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+
+/* About CSS */
+
+#aboutGrid {
+  margin: 0px;
+  display: grid;
+  justify-content: space-between;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25); /* drop shadow */
+  grid-template-rows: 300px 200px 300px;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: "hello text text"
+                       "hello text text"
+                       "resume resume resume";  
+}
+
+#hello img {
+  grid-area: hello;
+  display: flex;
+  max-width: 500px;
+  height: auto;
+}
+
+#aboutGrid .heading {
+  grid-area: text;
+  display: flex;
+  max-width: 300px;
+  height: auto;
+  vertical-align: top;
+}
+
+#aboutText {    /* HOW TO MAKE TEXT FLOW AROUND THE IMAGES? */
+  grid-area: text;
+  display: inline-block;
+  align-items: center;
+  width: 70%;
+  margin-left: 50px;
+}
+
+.resume-container {   /* IS THERE A BETTER WAY TO ALIGN THIS TO THE RIGHT SIDE OF GRID AREA? */
+  grid-area: resume;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 350px;    
+}
+
+.aboutGridArea {
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: right;
+}
+
+
+/* Work CSS */
+
+#work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #A26747;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25); /* drop shadow */
+}
+
+* {box-sizing: border-box} /* NOT SURE WHAT THIS DOES? */
+
+/* Slideshow CSS */
+
+.slideshow-container {
+  max-width: 500px;
+  max-height: 300px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: inline-flex;
+  flex-direction: row;
+  padding-left: 3%;
+  }
+
+  /* next/previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+  /* position "next" button to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+  /* on hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+  /* dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #AEAEAE;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #EEEEEE;
+}
+
+  /* fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Contact CSS */
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contactContainer img {
+margin: 40px;
+}
+
+
+/* Typography CSS */
+
+#navBar p {                
+  font-size: 24px;
+  justify-content: flex-baseline;
+}
+
+#title {              
+  font-size: 45px;
+  color: #A26747;
+  margin-top: 20px;
+}
+
+.heading p {
+  color: #A26747;
+  font-size: 45px;
+  text-align: center;
+  vertical-align: top;  /* SHOULD BE ALIGNED TOP & HORIZONTALLY CENTERED */
+} 
+
+#aboutText p {    
+  color: #000000;
+  font-size: 20px;
+  vertical-align: top; /* SHOULD BE ALIGNED TOP & HORIZONTALLY CENTERED */
+}
+
+#work p {     
+  color: #000000;
+  font-size: 45px;
+  vertical-align: top; /* SHOULD BE ALIGNED TOP & HORIZONTALLY CENTERED */
+}
+
+#contactText { 
+  padding-bottom: 3%
+}
+
+#contactText p {    
+  color: #000000;
+  font-size: 20px;
+  text-align: center;  
+}
+
+
+  
+/* Media Query CSS */
