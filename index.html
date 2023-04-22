@@ -3,117 +3,126 @@
 <head>       
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300&family=Poiret+One&display=swap" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <title>Laura Steinkopf | UX/UI Designer</title> 
+
+    <style>
+    
+    .mySlides {display: none}
+
+    body {
+    background-image: url("images/bg-texture-neutral-wash-landscape.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;    
+    }
+
+    .workGrid {
+    background-image: url("images/bg-texture-rust-wash.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25); /* drop shadow */
+    }
+    </style>
 </head>
 
 <body>
 
 <ul>
-    <a href="index.html"><img src="images/logo-with-name.png" alt="logo+name" height="65"></a>
+    <a href="index.html"><img src="images/logo-with-name.png" alt="logo+name" height="65"></a>  
     <li><a href="#contact">CONTACT</a></li>
     <li><a href="#work">WORK</a></li>
-    <li><a href="#aboutGrid">ABOUT</a></li> 
+    <li><a href="#about">ABOUT</a></li>     
 </ul>
 
 
-<section id="heroGrid">
+<div class="heroGrid">
     <div id="leftGraphic" class="heroGridArea">
-        <img src="images/left line graphic.png" alt="sienna retro line graphic" height="750">
+        <img src="images/left line graphic.png" alt="sienna retro line graphic" height="800">
     </div>    
-    <div class="heroLogo"> <!-- add alternate animation -->
-        <img src="images/logo_transparent_w.title.png" alt="logo" height="250">                
+    <div class="heroLogo"> <!-- add different animation -->
+        <img src="images/logo-transparent.png" alt="logo letter L" height="250">  
+        <p1>LAURA STEINKOPF</p1>  
+        <p2>UX/UI DESIGNER</p2> 
     </div>
     <div id="rightGraphic" class="heroGridArea">
-        <img src="images/right line graphic.png" alt="black retro line graphic" height="1760">
-    </div>    
-    
-</section>
+        <img src="images/right line graphic.png" alt="black retro line graphic" height="1785">
+    </div>        
+</div>
 
 
-<section id="aboutGrid">
+<div class="heading">
+    <p id="about" >ABOUT</p> 
+</div>
+
+<div id="aboutGrid">
     <div class="helloContainer">  
-        <img src="images/button hello black.png" class="hello-image" alt="black circle with word hello inside" height="500">
-    </div>
-    <div class="heading">
-        <p>ABOUT</p> <!-- WHY NOT ALIGNED TO TOP OF SECTION? -->
+        <img src="images/button hello black.png" class="hello-image" alt="black circle with word hello inside" height="700">
     </div>
     <div id="aboutText" class="aboutGridArea">                
         <p>Sed ut perspiciatis unde omnis iste natus error sit illo fugit voluptatem nisl saepe accusantium doloremque laudantium dicta atque civibus et quasi. Totam rem aperiam, eaque ipsa quae ab illo inventore  quasi architecto beatae  odit aut fugit. Te sanguine id seacula est sodales odit quocumque leo vivamus dui typi dicta atque civibus sem.</p>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit illo fugit voluptatem nisl saepe accusantium doloremque laudantium dicta atque civibus et quasi. Totam rem aperiam, eaque ipsa quae ab illo inventore  quasi architecto beatae  odit aut fugit. Te sanguine id seacula est sodales odit quocumque leo vivamus dui typi dicta atque civibus sem.</p>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit illo fugit voluptatem nisl saepe accusantium doloremque laudantium dicta atque civibus et quasi. Totam rem aperiam, eaque ipsa quae ab illo inventore  quasi architecto beatae  odit aut fugit. Te sanguine id seacula est sodales odit quocumque leo vivamus dui typi dicta atque civibus sem.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit illo fugit voluptatem nisl saepe accusantium doloremque laudantium dicta atque civibus et quasi. Totam rem aperiam, eaque ipsa quae ab illo inventore  quasi architecto beatae  odit aut fugit. Te sanguine id seacula est sodales odit quocumque leo vivamus dui typi dicta atque civibus sem.</p>                
     </div>
     <div class="resume-container" >
-        <a href="resume.html"><img src="images/button resume blue.png" class="resume-image" alt="blue circle with word 'resume' inside" height="200"></a>
+        <a href="resume.html"><img src="images/button resume blue.png" class="resume-image" alt="blue circle with word 'resume' inside" height="175"></a>
     </div>
-</section>
-
-<section id="work">
-    <div class="heading" class="workGridArea">
-        <p>WORK</p>
-    
-<!-- slideshow -->
-
-    <div class="slideshowContainer">
-
-    <!-- case study images  -->   <!-- WHY NOT ALL VISIBLE AT ONCE?  -->
-    <div class="mySlides fade">
-        <a href="case-study01.html"><img src="images/case-study-1.png" style="width:30%"></a>
-    </div>
-  
-    <div class="mySlides fade">
-        <a href="case-study02.html"><img src="images/case-study-2.png" style="width:30%"></a>
-    </div>
-  
-    <div class="mySlides fade">
-        <a href="case-study03.html"><img src="images/case-study-3.png" style="width:30%"></a>
-    </div>
-  
-    <div class="mySlides fade">
-        <a href="case-study03.html"><img src="images/case-study-4.png" style="width:30%"></a>
-    </div>
-
-    <div class="mySlides fade">
-        <a href="case-study03.html"><img src="images/case-study-5.png" style="width:30%"></a>
-    </div>
-
-    <!-- next / previous buttons -->    <!-- WHY NOT VISIBLE?  -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-
-  <br>
-  
-  <!-- dots/circles -->
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-  </div>
 </div>
-</section>
-
-<!-- end slideshow -->
 
 
-<section id="contact">
+
+
+
+<div class="workGrid">   
     <div class="heading">
-        <p>CONTACT</p>
+        <p id="work">WORK</p>
+    </div> 
+    <div class="slideshowContainer">
+        <div class="slideCard">
+          <img src="images/case-study01.png" alt="case study 01" style="width:100%" class="hover-opacity">
+          <div class="slideOverlay">            
+            <p id="caseStudyTitle">CASE STUDY 01</p>
+            <p id="slideCaption">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <a href="case-study01.html"><button class="button hover-opacity">MORE</button></a>
+          </div>
+        </div>
+        <div class="slideCard">
+          <img src="images/case-study02.png" alt="case study 02" style="width:100%" class="hover-opacity">
+          <div class="slideOverlay">            
+            <p id="caseStudyTitle">CASE STUDY 02</p>
+            <p id="slideCaption">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <a href="case-study02.html"><button class="button hover-opacity">MORE</button></a>
+          </div>
+        </div>
+        <div class="slideCard">
+          <img src="images/case-study03.png" alt="case study 03" style="width:100%" class="hover-opacity">
+          <div class="slideOverlay">            
+            <p id="caseStudyTitle">CASE STUDY 03</p>
+            <p id="slideCaption">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <a href="case-study03.html"><button class="button hover-opacity">MORE</button></a>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+<div class="contactGrid">
+    <div class="heading">
+        <p id="contact">CONTACT</p>
     </div>
     <div id="contactText">                
         <p>Thanks for stopping by!</p>
         <p>Let's connect:</p>
     </div>
-    <div class="contactContainer">  <!-- add icon on mouseover to these images -or- change to animated group of circles -->
+    <div class="contactIcons">  <!-- CHANGE TO ANIMATED GROUP OF CIRCLES? -->
         <a href="mailto:l.e.steinkopf@gmail.com"><img src="images/button email black.png" class="email-image" alt="black circle with word 'email' inside" height="175"></a>
         <a href="https://www.linkedin.com/in/laurasteinkopf/"><img src="images/button linkedin blue.png" class="linkedin-image" alt="blue circle with word 'linkedin' inside" height="175"></a>
-        <a href="mailto:+16124324245@tel"><img src="images/button phone sienna.png" class="phone-image" alt="sienna brown circle with word 'phone' inside" height="175"></a>
-        
+        <a href="mailto:+16124324245@tel"><img src="images/button phone sienna.png" class="phone-image" alt="sienna brown circle with word 'phone' inside" height="175"></a>        
     </div>
-</section>
+</div>
 
 
 <!-- insert preloader here if using -->

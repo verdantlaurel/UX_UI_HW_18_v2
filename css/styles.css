@@ -1,9 +1,8 @@
 body {     
   margin: 0;
   padding-top: 0px;
-  background-color: #EEEEEE;
-  font-family: 'Playfair Display', serif;
-  font-family: 'Poiret One', cursive;
+  background-color: #EEEEEE;  
+  font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -12,8 +11,7 @@ body {
 ul {
   list-style-type: none;
   margin: 0;
-  padding-top: 2px;
-  padding-left: 10px;
+  padding-left: 20px;
   overflow: hidden;
   background-color: #EEEEEE;
   position: fixed;
@@ -27,48 +25,51 @@ li {
 }
 
 li a {
-  display: block;
-  color: #000000;
+  display: inline-block;
+  color: #222222;
   text-align: center;
   padding-top: 32px;
   padding-bottom: 0px;
   padding-right: 40px;
-  font-size: 18pt;
+  font-size: 20pt;
   text-decoration: none;  
+  font-family: 'Poiret One', cursive;
 }
 
 li a:hover {
-    color: #A26747;
+    color: #905421;
+    font-weight: bold;
   }
 
 
 
 /* Above Fold CSS */
 
-#heroGrid {
+.heroGrid {
   margin: 0px;
-  padding-top: 55px;
+  padding-top: 50px;
   display: grid;
   grid-template-rows: 300px 300px 300px;
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-areas: 
   "left logo right"
   "left logo right"
-  "left title right"
-  ;
+  "left logo right";
 }
 
 #leftGraphic {
   grid-area: left;
   display: flex;
-  margin-top: 15px;
+  margin-top: 0px;
 }
 
 #rightGraphic {       
   grid-area: right;
   display: flex;
   align-content: right;
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-top: 15px;
+  float: right
 }
 
 .heroGridArea {
@@ -76,10 +77,11 @@ li a:hover {
   cursor: pointer;
   display: grid;
   grid-template-rows: 300px 300px 300px;
-  grid-template-columns: 1fr 500px 1fr;
-  grid-template-areas: "left logo right"
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas:
   "left logo right"
-  "left title right";
+  "left logo right"
+  "left logo right";
 }
 
 .heroLogo {        
@@ -87,7 +89,7 @@ li a:hover {
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 200px;
+  margin-top: 175px;
   align-items: center;
   max-width: 700px;
   height: auto;
@@ -97,7 +99,7 @@ li a:hover {
     animation: grow-and-shrink 2000ms;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-direction: alternate;    
 }
 
 @keyframes grow-and-shrink {
@@ -115,180 +117,222 @@ li a:hover {
 #aboutGrid {
   margin: 0px;
   display: grid;
-  justify-content: space-between;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25); /* drop shadow */
-  grid-template-rows: 300px 200px 300px;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-template-areas: "hello text text"
-                       "hello text text"
-                       "resume resume resume";  
+  justify-content: space-between;  
+  grid-template-rows: 200px 200px 300px;
+  grid-template-columns: 2fr 3.5fr 1.5fr;
+  grid-template-areas: "hello text null"
+                       "hello text null"
+                       "resume resume null";  
 }
 
-#hello img {
+
+
+.helloContainer img {
   grid-area: hello;
-  display: flex;
-  max-width: 500px;
+  display: inline;
   height: auto;
+  float:left !important;
+  width: 100%;
+  position: relative;
+  margin-left: -10% !important;
+  margin-top: -10% !important;
+  overflow: hidden;
 }
 
-#aboutGrid .heading {
-  grid-area: text;
-  display: flex;
-  max-width: 300px;
-  height: auto;
-  vertical-align: top;
-}
-
-#aboutText {    /* HOW TO MAKE TEXT FLOW AROUND THE IMAGES? */
-  grid-area: text;
-  display: inline-block;
-  align-items: center;
-  width: 70%;
-  margin-left: 50px;
-}
 
 .resume-container {   /* IS THERE A BETTER WAY TO ALIGN THIS TO THE RIGHT SIDE OF GRID AREA? */
   grid-area: resume;
-  display: flex;
+  display: inline-flex;
   justify-content: flex-end;
-  margin-right: 350px;    
+  margin-right: 10px;    
 }
 
 .aboutGridArea {
   margin: 5px;
-  cursor: pointer;
-  display: grid;
-  align-content: right;
+  cursor: pointer;  
 }
 
 
 /* Work CSS */
 
-#work {
-  display: flex;
-  flex-direction: column;
+.workGrid {     /* CHANGE TO FLEXBOX? */
+  margin: 0px;
+  margin-top: 10px;
+  display: grid;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #A26747;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25); /* drop shadow */
+  grid-template-rows: 150px 400px 100px;
+  grid-template-areas: 
+  "heading"
+  "slides"
+  "slides";  
 }
 
-* {box-sizing: border-box} /* NOT SURE WHAT THIS DOES? */
 
-/* Slideshow CSS */
-
-.slideshow-container {
-  max-width: 500px;
-  max-height: 300px;
-  position: relative;
-  margin: auto;
+.slideshowContainer {
+  padding:0.01em 20px;
+  margin:0 -16px;
+  grid-area: slides;
 }
 
-.mySlides {
-  display: inline-flex;
-  flex-direction: row;
-  padding-left: 3%;
-  }
-
-  /* next/previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.slideCard {
+  border: none;
+  padding: 0 8px;
+  float: left;
+  width:33%;
+  grid-area: slides;  
 }
 
-  /* position "next" button to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.hover-opacity:hover{
+  opacity:0.65
+}
+.hover-opacity-off:hover{
+  opacity:1
 }
 
-  /* on hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.slideOverlay {
+  padding: 0px;
+  margin: 0px;
+  opacity:0.55;
+  color:#EEEEEE !important;
+  background-color:#222222 !important;
+  justify-content: flex-end;  
 }
 
-  /* dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #AEAEAE;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+.slideOverlay:after,.slideOverlay:before {   /* UNSURE WHAT THIS DOES */
+  content: "";
+  display: table;
 }
 
-.active, .dot:hover {
-  background-color: #EEEEEE;
+#caseStudyTitle {
+  color:#EEEEEE !important;
+  padding-left: 20px;  
+  font-size: 32pt;
+  text-decoration: none;  
+  font-family: 'Poiret One', cursive;
+} 
+
+#slideCaption {
+  color:#EEEEEE !important;
+  padding-left: 20px;  
+  font-size: 14pt;
+  text-decoration: none;  
+  font-family: 'Montserrat', sans-serif;
+} 
+
+.button{
+  border:none;
+  display:inline-block;
+  padding:8px 16px;  
+  margin-left: 16px;
+  margin-right: auto;
+  margin-bottom:16px!important;  
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap;
+  color: #222222!important;
+  background-color:#EEEEEE !important;
+  font-family: 'Montserrat', sans-serif;  
 }
 
-  /* fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
 
 /* Contact CSS */
 
-#contact {
-  display: flex;
-  flex-direction: column;
+.contactGrid {
+  margin: 0px;
+  margin-top: 10px;
+  display: grid;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  grid-template-rows: 150px 200px 200px;
+  grid-template-areas: 
+  "contact-heading"
+  "text"
+  "icons";
 }
 
-.contactContainer img {
-margin: 40px;
+
+.contactIcons img {
+margin: 30px;
+grid-area: icons;
+margin-bottom: 10px;
 }
 
 
 /* Typography CSS */
 
-#navBar p {                
-  font-size: 24px;
-  justify-content: flex-baseline;
-}
 
-#title {              
-  font-size: 45px;
-  color: #A26747;
-  margin-top: 20px;
-}
+.heading #about {
+  color: #905421;
+  font-size: 55px;
+  text-align: center;
+  vertical-align: top;  
+  margin-bottom: 10px;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold; /* KEEP BOLD OR REGULAR WEIGHT? */
+} 
 
-.heading p {
-  color: #A26747;
+.heading #work {
+  grid-area: heading;
+  color: #222222;
+  font-size: 55px;
+  text-align: center;
+  vertical-align: top;  
+  margin-bottom: 10px;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold; /* KEEP BOLD OR REGULAR WEIGHT? */
+} 
+
+.heading #contact {
+  grid-area: contact-heading;
+  color: #905421;
+  font-size: 55px;
+  text-align: center;
+  vertical-align: top;  
+  margin-bottom: 10px;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold; /* KEEP BOLD OR REGULAR WEIGHT? */
+} 
+
+
+.heroGrid p1 {
+  grid-area: logo;
+  color: #222222;
+  font-size: 55px;
+  margin-top: 44px;
+  text-align: center;
+  vertical-align: top;  /* SHOULD BE ALIGNED TOP & HORIZONTALLY CENTERED */
+  font-family: 'Poiret One', cursive;
+} 
+
+.heroGrid p2 {
+  grid-area: logo;
+  color: #905421;
   font-size: 45px;
   text-align: center;
   vertical-align: top;  /* SHOULD BE ALIGNED TOP & HORIZONTALLY CENTERED */
+  font-family: 'Poiret One', cursive;
 } 
 
-#aboutText p {    
-  color: #000000;
+
+#aboutText {    /* HOW TO MAKE TEXT FLOW AROUND THE IMAGES? */
+  grid-area: text;
+  display: inline;
+  align-items: center;
+  width: 90%;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: #222222;
   font-size: 20px;
   vertical-align: top; /* SHOULD BE ALIGNED TOP & HORIZONTALLY CENTERED */
 }
 
-#work p {     
-  color: #000000;
-  font-size: 45px;
+.workGrid p {     
+  color: #222222;
+  font-size: 55px;
   vertical-align: top; /* SHOULD BE ALIGNED TOP & HORIZONTALLY CENTERED */
 }
 
@@ -297,7 +341,7 @@ margin: 40px;
 }
 
 #contactText p {    
-  color: #000000;
+  color: #222222;
   font-size: 20px;
   text-align: center;  
 }
@@ -305,3 +349,9 @@ margin: 40px;
 
   
 /* Media Query CSS */
+
+@media (min-width:601px){
+    .slideCard{
+      width:33.33333%
+  }
+}
