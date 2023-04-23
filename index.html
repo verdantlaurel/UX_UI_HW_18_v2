@@ -33,18 +33,18 @@
 <div class="navBar">
 <ul>
     <a href="index.html"><img src="images/logo-with-name-light.png" alt="logo+name" height="65"></a>  
-    <li><a href="#bottom">CONTACT</a></li>
-    <li><a href="#work">WORK</a></li>
-    <li><a href="#about">ABOUT</a></li>     
+    <li><a href="#bottom">CONTACT</a></li>  <!-- does NOT work w/anchor link offset JS -->  
+    <li><a href="#work">WORK</a></li>       <!-- works w/anchor link offset JS-->  
+    <li><a href="#about">ABOUT</a></li>     <!-- works w/anchor link offset JS-->  
 </ul>
 </div>
 
-
+<!-- HERO Section-->
 <div class="heroGrid">
     <div id="leftGraphic" class="heroGridArea">
         <img src="images/left line graphic.png" alt="sienna retro line graphic" height="800">
     </div>    
-    <div class="heroLogo"> <!-- add different animation -->
+    <div class="heroLogo"> <!-- add different graphic/animation -->
         <img src="images/logo-transparent.png" alt="logo letter L" height="250">  
         <p1>LAURA STEINKOPF</p1>  
         <p2>UX/UI DESIGNER</p2> 
@@ -55,9 +55,12 @@
 </div>
 
 <div class="heading">
-    <p id="about" >ABOUT</p>
+    <a class="anchor" id="about"></a>
+    <p id="about">ABOUT</p>
 </div>
 
+
+<!-- ABOUT Section-->
 <div id="aboutGrid"> 
     <div class="helloContainer">  
         <img src="images/button hello black.png" class="hello-image" alt="black circle with word hello inside" height="700">
@@ -74,9 +77,10 @@
 
 
 
-
+<!-- WORK Section-->
 <div class="workGrid">   
     <div class="heading">
+        <a class="anchor" id="work"></a>
         <p id="work">WORK</p>
     </div> 
     <div class="slideshowContainer">
@@ -85,7 +89,7 @@
           <div class="slideOverlay">            
             <p id="caseStudyTitle">CASE STUDY 01</p>
             <p id="slideCaption">Praesent tincidunt sed tellus ut rutrum sed vitae justo. Praesent tincidunt sed tellus ut rutrum sed vitae justo. Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <a href="case-study01.html"><button class="button hover-opacity">MORE</button></a>
+            <a href="case-study01.html"><button class="button hover-opacity">&#10095;</button></a>
           </div>
         </div>
         <div class="slideCard">
@@ -93,7 +97,7 @@
           <div class="slideOverlay">            
             <p id="caseStudyTitle">CASE STUDY 02</p>
             <p id="slideCaption">Praesent tincidunt sed tellus ut rutrum sed vitae justo. Praesent tincidunt sed tellus ut rutrum sed vitae justo. Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <a href="case-study02.html"><button class="button hover-opacity">MORE</button></a>
+            <a href="case-study02.html"><button class="button hover-opacity">&#10095;</button></a>
           </div>
         </div>
         <div class="slideCard">
@@ -101,7 +105,7 @@
           <div class="slideOverlay">            
             <p id="caseStudyTitle">CASE STUDY 03</p>
             <p id="slideCaption">Praesent tincidunt sed tellus ut rutrum sed vitae justo. Praesent tincidunt sed tellus ut rutrum sed vitae justo. Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <a href="case-study03.html"><button class="button hover-opacity">MORE</button></a>
+            <a href="case-study03.html"><button class="button hover-opacity">&#10095;</button></a>
           </div>
         </div>
         <div class="slideCard">
@@ -109,7 +113,7 @@
             <div class="slideOverlay">            
               <p id="caseStudyTitle">CASE STUDY 04</p>
               <p id="slideCaption">Praesent tincidunt sed tellus ut rutrum sed vitae justo. Praesent tincidunt sed tellus ut rutrum sed vitae justo. Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-              <a href="case-study03.html"><button class="button hover-opacity">MORE</button></a>
+              <a href="case-study03.html"><button class="button hover-opacity">MORE &#10095;</button></a>
             </div>
           </div>
           <div class="slideCard">
@@ -117,18 +121,32 @@
             <div class="slideOverlay">            
               <p id="caseStudyTitle">CASE STUDY 05</p>
               <p id="slideCaption">Praesent tincidunt sed tellus ut rutrum sed vitae justo. Praesent tincidunt sed tellus ut rutrum sed vitae justo. Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-              <a href="case-study03.html"><button class="button hover-opacity">MORE</button></a>
+              <a href="case-study03.html"><button class="button hover-opacity">MORE &#10095;</button></a>
             </div>
           </div>
+    
+    <!-- next/previous buttons -->
+    <div class="next-prev">        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
+
+    <!-- dots/circles -->
+    <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+</div>
 </div>
 
 
-
-<a id="bottom"></a>
-
+<!-- CONTACT Section-->
 <div class="contactGrid">
     <div class="heading">
+        <a class="anchor" id="contact"></a>
         <p id="contact">CONTACT</p>
     </div>
     <div id="contactText">                
@@ -150,6 +168,8 @@
 
 </body>
 
+
+<a id="bottom"></a>  <!-- this works only if JS anchor link offset if OFF -->
 <footer id="footer">
     <p>&#169 2023 | Laura Steinkopf</p>    
 </footer>
