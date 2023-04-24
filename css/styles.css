@@ -133,8 +133,6 @@ body {
                        "resume resume null";  
 }
 
-
-
 .helloContainer img {
   grid-area: hello;  
   height: auto;
@@ -145,7 +143,6 @@ body {
   margin-top: -10% !important;
   overflow: hidden;
 }
-
 
 .resume-container {   /* IS THERE A BETTER WAY TO ALIGN THIS TO THE RIGHT SIDE OF GRID AREA? */
   grid-area: resume;
@@ -175,7 +172,7 @@ body {
 }
 
 
-/* SLIDESHOW */
+/* SLIDESHOW CSS */
 .slideshowContainer {
   display: inline-flex;
   padding: 20px;
@@ -252,7 +249,7 @@ body {
   font-family: 'Montserrat', sans-serif;  
 }
 
-/* position the "next button" to the right */
+/* position the "next" button to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
@@ -264,34 +261,33 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-
-  /* dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 13px;
-    width: 13px;
-    margin: 20px 2px;
-    background-color: #AEAEAE;
-    border-radius: 50%;
-    display: flex;
-    transition: background-color 0.6s ease;
-    grid-area: dots;
-  }
+/* dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 20px 2px;
+  background-color: #AEAEAE;
+  border-radius: 50%;
+  display: flex;
+  transition: background-color 0.6s ease;
+  grid-area: dots;
+}
   
-  .active, .dot:hover {
-    background-color: #EEEEEE;
-  }
+.active, .dot:hover {
+  background-color: #EEEEEE;
+}
   
-    /* fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
+/* fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
   
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
 /* Contact CSS */
 
@@ -301,7 +297,7 @@ body {
   padding: 60px;
   display: grid;
   justify-content: center;
-  grid-template-rows: 100px 300px 250px;
+  grid-template-rows: 100px 300px 275px;
   grid-template-areas: 
   "contact-heading"
   "text"
@@ -314,7 +310,7 @@ body {
   margin: 20px;
 }
 
-/* Resume CSS */
+/* Resume CSS */  /* ADD accordion to sections for UI interaction */
 
 .resumeGrid {
   display: grid;
