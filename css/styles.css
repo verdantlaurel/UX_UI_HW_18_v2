@@ -304,7 +304,6 @@ body {
   "icons";
 }
 
-
 .contactIcons img {
   grid-area: icons;
   margin: 20px;
@@ -385,8 +384,7 @@ body {
   font-size: 55px;
   text-align: center;
   vertical-align: top;  
-  margin: 40px;  
-  margin-bottom: 0px;
+  margin: 0px;
   font-family: 'Poiret One', cursive;
   font-weight: bold; /* KEEP BOLD OR REGULAR WEIGHT? */
 } 
