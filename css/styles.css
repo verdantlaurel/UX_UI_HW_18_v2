@@ -133,7 +133,7 @@ body {
                        "resume resume null";  
 }
 
-.helloContainer img {
+.helloContainer img {   /* WHY IN FRONT OF HEADER ON SCROLL? */
   grid-area: hello;  
   height: auto;
   float:left !important;
@@ -144,7 +144,7 @@ body {
   overflow: hidden;
 }
 
-.resume-container {   /* IS THERE A BETTER WAY TO ALIGN THIS TO THE RIGHT SIDE OF GRID AREA? */
+.resume-container { 
   grid-area: resume;
   display: inline-flex;
   justify-content: flex-end;
@@ -159,7 +159,7 @@ body {
 
 /* Work CSS */
 
-.workGrid {     /* CHANGE TO FLEXBOX? */
+.workGrid {     /* CHANGE TO FLEX? */
   margin: 0px;  
   display: grid;
   justify-content: center;
@@ -195,7 +195,7 @@ body {
   opacity:1
 }
 
-.slideOverlay {
+.slideOverlay {   /* WHY IN FRONT OF HEADER ON SCROLL? */
   padding: 0px;
   margin: 0px;
   margin-top: -5px;
@@ -210,7 +210,7 @@ body {
   display: table;
 }
 
-#caseStudyTitle {
+#caseStudyTitle {   /* WHY IN FRONT OF HEADER ON SCROLL? */
   color:#EEEEEE !important;
   padding-left: 15px; 
   padding-top: 10px;
@@ -220,7 +220,7 @@ body {
   font-family: 'Poiret One', cursive;
 } 
 
-#slideCaption {
+#slideCaption {    /* WHY IN FRONT OF HEADER ON SCROLL? */
   color:#EEEEEE !important;
   padding-left: 15px; 
   padding-top: 10px;
@@ -230,7 +230,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 } 
 
-.button{
+.button{     /* WHY IN FRONT OF HEADER ON SCROLL? */
   border:none;
   display:inline-flex;
   padding:8px 16px;  
@@ -310,7 +310,7 @@ body {
   margin: 20px;
 }
 
-/* Resume CSS */  /* ADD accordion to sections for UI interaction */
+/* Resume CSS */  /* ADD accordion to sections for UI interaction! */
 
 .resumeGrid {
   display: grid;
@@ -411,7 +411,7 @@ body {
   font-size: 55px;
   margin-top: 44px;
   text-align: center;
-  vertical-align: top;  /* SHOULD BE ALIGNED TOP & HORIZONTALLY CENTERED */
+  vertical-align: top;  
   font-family: 'Poiret One', cursive;
 } 
 
@@ -420,7 +420,7 @@ body {
   color: #905421;
   font-size: 45px;
   text-align: center;
-  vertical-align: top;  /* SHOULD BE ALIGNED TOP & HORIZONTALLY CENTERED */
+  vertical-align: top;  
   font-family: 'Poiret One', cursive;
 } 
 
@@ -432,13 +432,13 @@ body {
   width: 95%;
   margin: 10px;
   color: #222222;
-  vertical-align: top; /* SHOULD BE ALIGNED TOP & HORIZONTALLY CENTERED */
+  vertical-align: top; 
 }
 
 .workGrid p {     
   color: #222222;
   font-size: 55px;
-  vertical-align: top; /* SHOULD BE ALIGNED TOP & HORIZONTALLY CENTERED */
+  vertical-align: top; 
 }
 
 #contactText { 

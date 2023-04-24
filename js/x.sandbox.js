@@ -1,3 +1,5 @@
+// PRELOADER
+
 function fade() {
     $('.preloader').fadeOut("slow");
     }
@@ -5,7 +7,8 @@ function fade() {
 
 
 
-// Slideshow
+// SLIDESHOW
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -38,7 +41,7 @@ function showSlides(n) {
 
 
 
-// anchor link offset
+// ANCHOR LINK OFFSET
 
 // function actually applying the offset
 function offsetAnchor() {
