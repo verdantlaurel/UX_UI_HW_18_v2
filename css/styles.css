@@ -9,6 +9,10 @@ body {
 
 /* Navigation CSS */
 
+.navBar {
+  z-index: 900; /* SHOULDN'T THIS MAKE THE HEADER STAY ON TOP?  */
+}
+
 .navBar ul {
   list-style-type: none;
   margin: 0;
@@ -108,7 +112,7 @@ body {
     animation: grow-and-shrink 2000ms;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-direction: alternate;    
+    animation-direction: alternate;        
 }
 
 @keyframes grow-and-shrink {
